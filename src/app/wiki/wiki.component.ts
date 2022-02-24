@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { WikiService } from './wiki.service';
 
 @Component({
   selector: 'app-wiki',
   templateUrl: './wiki.component.html',
-  styleUrls: ['./wiki.component.css']
+  styleUrls: ['./wiki.component.css'],
 })
 export class WikiComponent implements OnInit {
+  private wikiService: WikiService;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(wikiService: WikiService) {
+    this.wikiService = wikiService;
   }
 
+  ngOnInit(): void {}
+
+  onTerm(term: string) {
+    this.wikiService.search(term);
+    console.log(term);
+  }
 }
