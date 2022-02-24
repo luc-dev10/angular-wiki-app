@@ -1,17 +1,17 @@
-<div class="container">
+<div class="container overflow-auto">
   <table class="table mb-4">
     <thead>
       <tr>
-        <th class="col-sm-3" scope="col">Title</th>
-        <th class="col-sm-3" scope="col">Count</th>
-        <th class="col-sm-6" scope="col">Snippet</th>
+        <th class="col-sm-2" scope="col">Title</th>
+        <th class="col-sm-2" scope="col">Count</th>
+        <th class="col-sm-8" scope="col">Snippet</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let page of pages">
-        <td class="col-sm-3">{{ page.title }}</td>
-        <td class="col-sm-3">{{ page.wordcount }}</td>
-        <td class="col-sm-6">{{ page.snippet }}</td>
+        <td class="col-sm-2">{{ page.title }}</td>
+        <td class="col-sm-2">{{ page.wordcount }}</td>
+        <td class="col-sm-8">{{ page.snippet }}</td>
       </tr>
     </tbody>
   </table>
