@@ -1,0 +1,13 @@
+.bg-dark-blue {
+  background: #27293c;
+}
+
+.wiki-app {
+  max-width: 55%;
+}
+
+@media (max-width: 1200px) {
+  .wiki-app {
+    max-width: 90%;
+  }
+}
