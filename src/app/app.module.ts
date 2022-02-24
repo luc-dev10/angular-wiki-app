@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { WikiModule } from './wiki/wiki.module';
 
 @NgModule({
   declarations: [AppComponent, NavBarComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, WikiModule],
   providers: [],
   bootstrap: [AppComponent],
 })

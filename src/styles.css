@@ -1,2 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #101826;
+  color: #d9dadc;
+}
+
+.bg-dark-grey {
+  background-color: #1f2936;
+}
+
+.text-light-grey {
+  color: white;
+}
