@@ -7,16 +7,16 @@ import { WikiService } from './wiki.service';
   styleUrls: ['./wiki.component.css'],
 })
 export class WikiComponent implements OnInit {
-  private wikiService: WikiService;
+  pages = [];
 
-  constructor(wikiService: WikiService) {
-    this.wikiService = wikiService;
-  }
+  constructor(private wikiService: WikiService) {}
 
   ngOnInit(): void {}
 
   onTerm(term: string) {
-    this.wikiService.search(term);
-    console.log(term);
+    this.wikiService.search(term).subscribe((response: any) => {
+      this.pages = response.query.search;
+      console.log(this.pages);
+    });
   }
 }

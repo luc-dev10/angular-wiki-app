@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-12 wiki-app bg-dark-blue mt-5 rounded">
+    <div class="col-12 wiki-app bg-dark-blue my-5 rounded">
       <app-search-bar (submitted)="onTerm($event)"></app-search-bar>
-      <app-page-list></app-page-list>
+      <app-page-list [pages]="pages"></app-page-list>
     </div>
   </div>
 </div>
