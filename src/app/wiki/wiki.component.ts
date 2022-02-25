@@ -14,9 +14,10 @@ export class WikiComponent implements OnInit {
   ngOnInit(): void {}
 
   onTerm(term: string) {
-    this.wikiService.search(term).subscribe((response: any) => {
-      this.pages = response.query.search;
-      console.log(this.pages);
-    });
+    if (term != null && term != '')
+      this.wikiService.search(term).subscribe((response: any) => {
+        this.pages = response.query.search;
+      });
+    else this.pages = [];
   }
 }
