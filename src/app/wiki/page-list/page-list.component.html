@@ -9,9 +9,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let page of pages">
-        <td class="col-sm-2">{{ page.title }}</td>
+        <td class="col-sm-2">
+          {{ page.title }}
+        </td>
         <td class="col-sm-2">{{ page.wordcount }}</td>
-        <td class="col-sm-8">{{ page.snippet }}</td>
+        <td class="col-sm-8" [innerHTML]="page.snippet"></td>
       </tr>
     </tbody>
   </table>

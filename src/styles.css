@@ -13,3 +13,8 @@ body {
 .text-light-grey {
   color: white;
 }
+
+.searchmatch {
+  background-color: #ccd9ff;
+  color: black;
+}
