@@ -15,6 +15,6 @@ body {
 }
 
 .searchmatch {
-  background-color: #ccd9ff;
-  color: black;
+  font-weight: bold;
+  text-decoration: underline;
 }

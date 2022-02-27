@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WikiService } from './wiki.service';
+import { WikiResponse } from './WikiResponse';
 
 @Component({
   selector: 'app-wiki',
@@ -7,7 +8,7 @@ import { WikiService } from './wiki.service';
   styleUrls: ['./wiki.component.css'],
 })
 export class WikiComponent implements OnInit {
-  pages = [];
+  pages: {}[] = [];
 
   constructor(private wikiService: WikiService) {}
 
@@ -15,8 +16,8 @@ export class WikiComponent implements OnInit {
 
   onTerm(term: string) {
     if (term != null && term != '')
-      this.wikiService.search(term).subscribe((response: any) => {
-        this.pages = response.query.search;
+      this.wikiService.search(term).subscribe((pages) => {
+        this.pages = pages;
       });
     else this.pages = [];
   }
